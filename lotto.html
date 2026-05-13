@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="프리미엄 로또 번호 추첨기 - 행운의 번호를 지금 바로 확인하세요.">
+    <title>프리미엄 로또 추첨기</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="./lotto.js" defer></script>
+</head>
+<body>
+    <div class="blob"></div>
+    <a href="./index.html" style="position: absolute; top: 30px; left: 30px; color: #94a3b8; text-decoration: none; font-size: 1rem; display: flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease; z-index: 10; font-weight: 600; background: rgba(255,255,255,0.05); padding: 10px 20px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.color='#94a3b8'; this.style.background='rgba(255,255,255,0.05)'">
+        <span style="font-size: 1.4rem;">←</span> 메인으로
+    </a>
+    <div class="container">
+        <h1>Lucky Picks</h1>
+        <p class="subtitle">프리미엄 로또 번호 추첨기</p>
+        
+        <div class="balls-container" id="balls-container">
+            <!-- Initial placeholders -->
+            <div class="ball placeholder show"><span>0</span></div>
+            <div class="ball placeholder show"><span>0</span></div>
+            <div class="ball placeholder show"><span>0</span></div>
+            <div class="ball placeholder show"><span>0</span></div>
+            <div class="ball placeholder show"><span>0</span></div>
+            <div class="ball placeholder show"><span>0</span></div>
+        </div>
+
+        <div id="celebration-msg" class="celebration-msg">🎉 당첨을 축하합니다! 🎉</div>
+        <button class="btn-draw" id="draw-btn">행운 번호 추첨하기</button>
+    </div>
+</body>
+</html>
