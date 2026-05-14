@@ -12,15 +12,44 @@
         .stock-container {
             width: 100%;
             max-width: 800px;
-            margin-top: 2rem;
+            margin-top: 1rem;
         }
         
-        .stock-header {
+        /* Stock Menu Tabs */
+        .stock-menu {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-            padding: 0 1rem;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 0.5rem;
+            border-radius: 50px;
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .menu-tab {
+            padding: 0.8rem 1.5rem;
+            border-radius: 40px;
+            font-weight: 700;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 1rem;
+            flex: 1;
+            text-align: center;
+        }
+
+        .menu-tab:hover {
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .menu-tab.active {
+            background: linear-gradient(135deg, #4f46e5, #6366f1);
+            color: white;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
         }
 
         .stock-list {
@@ -98,6 +127,12 @@
         <p class="subtitle">관심 종목의 실시간 흐름을 확인하세요</p>
 
         <div class="stock-container">
+            <div class="stock-menu">
+                <div class="menu-tab active">관심종목</div>
+                <div class="menu-tab">구매종목</div>
+                <div class="menu-tab">수익율</div>
+            </div>
+
             <div class="stock-list">
                 <!-- Sample Stock Items -->
                 <div class="stock-item">
