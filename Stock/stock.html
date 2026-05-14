@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Stock - 주식 관심종목</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .stock-container {
+            width: 100%;
+            max-width: 800px;
+            margin-top: 2rem;
+        }
+        
+        .stock-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding: 0 1rem;
+        }
+
+        .stock-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .stock-item {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        .stock-item:hover {
+            transform: scale(1.02);
+        }
+
+        .stock-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .stock-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .stock-symbol {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .stock-price-info {
+            text-align: right;
+        }
+
+        .stock-price {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--text-main);
+        }
+
+        .stock-change {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .up { color: #ef4444; }
+        .down { color: #3b82f6; }
+
+        .empty-state {
+            padding: 4rem 2rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="blob"></div>
+    <a href="../index.html" style="position: absolute; top: 30px; left: 30px; color: #64748b; text-decoration: none; font-size: 1rem; display: flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease; z-index: 10; font-weight: 600; background: rgba(255,255,255,0.5); padding: 10px 20px; border-radius: 50px; border: 1px solid rgba(0,0,0,0.05); backdrop-filter: blur(10px);" onmouseover="this.style.color='#0f172a'; this.style.background='rgba(255,255,255,0.8)'" onmouseout="this.style.color='#64748b'; this.style.background='rgba(255,255,255,0.5)'">
+        <span style="font-size: 1.4rem;">←</span> 메인으로
+    </a>
+    
+    <div class="container" style="max-width: 900px;">
+        <h1>My Stock</h1>
+        <p class="subtitle">관심 종목의 실시간 흐름을 확인하세요</p>
+
+        <div class="stock-container">
+            <div class="stock-list">
+                <!-- Sample Stock Items -->
+                <div class="stock-item">
+                    <div class="stock-info">
+                        <span class="stock-name">삼성전자</span>
+                        <span class="stock-symbol">005930</span>
+                    </div>
+                    <div class="stock-price-info">
+                        <div class="stock-price">78,500원</div>
+                        <div class="stock-change up">▲ 1,200 (+1.55%)</div>
+                    </div>
+                </div>
+
+                <div class="stock-item">
+                    <div class="stock-info">
+                        <span class="stock-name">SK하이닉스</span>
+                        <span class="stock-symbol">000660</span>
+                    </div>
+                    <div class="stock-price-info">
+                        <div class="stock-price">182,300원</div>
+                        <div class="stock-change down">▼ 2,100 (-1.14%)</div>
+                    </div>
+                </div>
+
+                <div class="stock-item">
+                    <div class="stock-info">
+                        <span class="stock-name">NAVER</span>
+                        <span class="stock-symbol">035420</span>
+                    </div>
+                    <div class="stock-price-info">
+                        <div class="stock-price">189,500원</div>
+                        <div class="stock-change up">▲ 500 (+0.26%)</div>
+                    </div>
+                </div>
+
+                <div class="empty-state">
+                    준비 중인 기능입니다. 종목 추가 및 실시간 연동 기능이 곧 추가될 예정입니다.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
